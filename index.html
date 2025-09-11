@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lời tỏ tình</title>
+  <style>
+    :root {
+      --hex-size: 200px;
+      --main-color: #ff4d79;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6eb, #ffd6e0, #ffc1d9);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--main-color);
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      text-shadow: 0 3px 8px rgba(255, 77, 121, 0.3);
+      animation: heartbeat 1.8s infinite;
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+
+      25% {
+        transform: scale(1.1);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      75% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(var(--hex-size), 1fr));
+      gap: 30px;
+      justify-items: center;
+      padding: 40px;
+      max-width: 1200px;
+    }
+
+    .clipped-border {
+      width: var(--hex-size);
+      height: var(--hex-size);
+      -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+      position: relative;
+      background: linear-gradient(135deg, #ff7eb9, #ff65a3, #7afcff, #feff9c);
+      padding: 6px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .clipped-border img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      -webkit-clip-path: inherit;
+      clip-path: inherit;
+      display: block;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .clipped-border:hover {
+      transform: translateY(-10px) scale(1.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      z-index: 10;
+    }
+
+    .clipped-border:hover img {
+      transform: scale(1.15);
+      filter: brightness(1.2) saturate(1.3);
+    }
+
+    @media screen and (max-width: 600px) {
+      :root {
+        --hex-size: 120px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>💖 Anh chỉ muốn nói: Anh thích em rất nhiều 💖</h1>
+  <div class="gallery">
+    <div class="clipped-border">
+      <img
+        src="https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/476444712_1679733305956098_5662115309030995901_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=p9Vnl6aOczQQ7kNvwE_jpdE&_nc_oc=AdlzD42Os2KCyRZ4I2mFl9atmTuoYlmG4cYLRFMkZFzi-Y5KfCDknF6JNoljIndTsjw&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4ghr62x3CQc7BWBr5BGrYw&oh=00_AfZIOhusEUP3g0-w7osxENmR77Rl5bpcm271oN8URBL7dw&oe=68C70BD9">
+    </div>
+    <div class="clipped-border">
+      <img
+        src="https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/476445955_1679733362622759_2912739966012547556_n.jpg?stp=c0.79.720.720a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=50ad20&_nc_ohc=raNhScY9bewQ7kNvwHmTIAH&_nc_oc=Adm1rTqm1-Xv47yUuui-ve4HM4zvUfunIi5hsXjWIIX3mjDt4BhG2fwtaQQFR5AGT6w&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=QdeeodSVlBn2PSSkresWJQ&oh=00_AfaJURL8AuyWpkVQaZiAe5OW5dH6NhYmTPjrDqDj3qsKTQ&oe=68C72FF7">
+    </div>
+    <div class="clipped-border">
+      <img
+        src="https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/476065144_1674240009838761_3639773051071507096_n.jpg?stp=c0.79.720.720a_dst-jpg_s206x206_tt6&_nc_cat=107&ccb=1-7&_nc_sid=50ad20&_nc_ohc=5T0bzzw4f80Q7kNvwExsNjT&_nc_oc=AdlZ5YMx9tJFrrcwt1SNXuOWOAfxkgMCq4rAxr00UO1v-1GClwuv5axW1OjRgzM5iK8&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=n0H7Y_q3sh9rrJsyfnB3EA&oh=00_AfaZC_M_AZGxLjpNDI1IExyqkP2odxbV9kIc8EL8VphyWQ&oe=68C70539">
+    </div>
+    <div class="clipped-border">
+      <img
+        src="https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/475804192_1674240309838731_5273034178836864160_n.jpg?stp=c0.105.961.961a_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=50ad20&_nc_ohc=UKm4T66lD7MQ7kNvwHjdCwX&_nc_oc=Adl_24q5KvUT0R7rYwuMjKulytWEE4IBQwoMgpaJen0ZF468EEtWVsgNMrftM8du0Ag&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=QdeeodSVlBn2PSSkresWJQ&oh=00_AfZasMSO94sNxw_Ja-CnOpPuB-IcSMQEz4ZeYF1RnG8K8Q&oe=68C7075B">
+    </div>
+    <div class="clipped-border">
+      <img
+        src="https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/475522163_1674240326505396_3889988806727594755_n.jpg?stp=c0.79.720.720a_dst-jpg_s206x206_tt6&_nc_cat=101&ccb=1-7&_nc_sid=50ad20&_nc_ohc=WhRBGzM9fRIQ7kNvwE1c-yV&_nc_oc=AdkmwlLo7cE5PoXoqXpgEDLXp0Uu_nx8COYz5oJkoSA5ZFupuk6HNO_xie2HK52t35o&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=n0H7Y_q3sh9rrJsyfnB3EA&oh=00_AfZ7bHBRvN1EvJAPRQZX8wrX7bvm_lHURi78VU1Ee27azw&oe=68C708D7">
+    </div>
+    <div class="clipped-border">
+      <img
+        src="https://scontent.fhan19-1.fna.fbcdn.net/v/t39.30808-6/475446884_1674240333172062_6093207849217051743_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Rb8UTmhGRYIQ7kNvwExvQV7&_nc_oc=Adk_W5x4EiQuxW2pf9URREVr0bzfV9lAH7cJX7BMr8rov0tIBXDE6DfnNg6bLhu7hTY&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=OM6cV_MTJjDulsNFWOxxVw&oh=00_AfYOFP_oaBXyRziz_buFxinxFlgJPMJtYN5QyzTOPZk2og&oe=68C7FC69">
+    </div>
+  </div>
+
+  <!-- Audio Player -->
+  <audio id="bg-music" autoplay loop hidden></audio>
+
+  <script>
+    // Danh sách link nhạc (mp3)
+    const playlist = [
+      "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+    ];
+
+    // Chọn ngẫu nhiên
+    const randomSong = playlist[Math.floor(Math.random() * playlist.length)];
+
+    // Set cho audio
+    const audio = document.getElementById("bg-music");
+    audio.src = randomSong;
+    audio.volume = 0.6; // chỉnh âm lượng vừa phải
+    audio.play().catch(() => {
+      console.log("Trình duyệt chặn autoplay, cần người dùng click.");
+    });
+  </script>
+</body>
+
+</html>
